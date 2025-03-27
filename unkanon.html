@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFJournal: Неканонические ДФ</title>
+    <link rel="stylesheet" href="styles.css" type = "text/css"/>
+	<style>
+		.hidden {
+			display: flex;
+		}
+	</style>
+	
+	<style>
+		.buttonChangeColor {
+		    text-decoration: none;
+		    color: #FFFFFF;
+		}
+		a.buttonChangeColor:hover {
+		    color:  #FFFFFF;
+		    text-shadow: 0 0 5px  #FFFFFF;
+		}
+	</style>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    
+    
+    <body>
+	    <header class = "header_pc" id = "header_pc">
+			<audio id="audio" src="sounds/womp.mp3"></audio>
+			<img src="images/dfruit.webp" width = "120px" id = "DWS_logo"
+		onclick="this.src = (this.src.indexOf ('.jpg') > 0) ? 'images/dfruit.webp' : 'images/dfruit.webp';if(audio.paused){audio.currentTime=0;audio.play()}else{audio.pause()}">
+			<nav>
+				<ul class = "header_menu_pc" id = "header_menu_pc">
+					<li>
+						<a href = "news.html" class="buttonChangeColor">Главная страница</a>
+					</li>
+					<li>
+						<a href = "roadmaps.html" class="buttonChangeColor">Контактные данные</a>
+					</li>
+					<li>
+						<a href = "OurTeam.html" class="buttonChangeColor">Дьявольские фрукты</a>
+					</li>
+				</ul>
+				<div class = "burger_bg" id = "burger_bg"></div>
+				<div class = "burger" id = "burger" class="buttonChangeColor">
+					<span></span>
+				</div>
+			</nav>
+		</header>
+		<div class = "news_articles_bg">
+			<h1>Неканонические дьявольские фрукты.</h1>
+			<img src="images/Gomu_Gomu.webp">
+			<p>Дьявольские фрукты как канонически, так и неканонические бывают 3 типов.
+			</p>
+			<h2>1. Логия. </h2>
+			<h3> 1.1 Паса Паса но Ми.</h3>
+            <img src="images/Pasa_Pasa.webp">
+            <p>Паса Паса но Ми — это неканонический Дьявольский плод типа логия из видеоигры One Piece: Big Secret Treasure of the Seven Phantom Islands, который позволяет пользователю создавать, контролировать и превращаются в листы бумаги. Его съел Саймон, главный антагонист игры.</p>
+            <h2>2. Парамеция</h2>
+            <h3>2.1 Гору Гору но Ми</h3>
+			<img src="images/Goru_Goru.webp">
+			<p>Гору Гору но Ми — дьявольский плод типа парамеция, позволяющий силой мысли манипулировать золотом. Его съел Гилдо Тесоро.</p>
+            <h2>3. Зоан</h2>
+            <h3>3.1 Обычный Зоан</h3>
+            <h4>3.1.1 Тори Тори но Ми, модель: Орёл</h4>
+			<img src="images/Tori_Tori_Eagle.webp">
+			<p>Тори Тори но Ми, модель: Орёл — это неканонический Дьявольский плод типа Зоан, который позволяет пользователю превращаться в орла. Его съел Базз.</p>
+			<h3>3.2 Древний Зоан</h3>
+            <h4>Не показали!</h4>
+			<h3>3.3 Мифический Зоан</h3>
+            <h4>3.3.1 Ину Ину но Ми, модель: Бакэ-дануки</h4>
+            <img src="images/Pato.webp">
+            <p>Ину Ину но Ми, модель: Бакэ-дануки — это Дьявольский плод, типа Мифический Зоан, который позволяет пользователю превращаться в "тануки" ("狸" — "енот-оборотень"). Он был съеден Пато.</p>
+			<script>
+			    var element = document.getElementById("burger");
+			    var otherElement = document.getElementById("header_menu_pc");
+
+			    element.addEventListener("click", function() {
+			    this.classList.toggle('active');
+			    otherElement.classList.toggle("hidden");
+			    });
+			    
+			    onemoreotherElement = document.getElementById("burger_bg");
+			    
+			    element.addEventListener("click", function() {
+			    this.classList.toggle('active');
+			    onemoreotherElement.classList.toggle("hidden");
+			    });
+			</script>
+	</body>
+</html>

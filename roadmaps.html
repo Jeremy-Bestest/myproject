@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DFJournal: our team</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+
+	<style>
+		.hidden {
+			display: flex;
+		}
+	</style>
+
+	<style>
+		.buttonChangeColor {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+
+		a.buttonChangeColor:hover {
+			color: #FFFFFF;
+			text-shadow: 0 0 5px #FFFFFF;
+		}
+	</style>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<header class="header_pc" id="header_pc">
+		<audio id="audio" src="sounds/womp.mp3"></audio>
+		<img src="images/dfruit.webp" width = "120px" id = "DWS_logo"
+		onclick="this.src = (this.src.indexOf ('.jpg') > 0) ? 'images/dfruit.webp' : 'images/dfruit.webp';if(audio.paused){audio.currentTime=0;audio.play()}else{audio.pause()}">
+		<nav>
+			<ul class="header_menu_pc" id="header_menu_pc">
+				<li>
+					<a href="news.html" class="buttonChangeColor">Главная страница</a>
+				</li>
+				<li>
+					<a href="roadmaps.html" class="buttonChangeColor">Контактные данные</a>
+				</li>
+				<li>
+					<a href="OurTeam.html" class="buttonChangeColor">Дьявольские фрукты</a>
+				</li>
+			</ul>
+			<div class="burger_bg" id="burger_bg"></div>
+			<div class="burger" id="burger" class="buttonChangeColor">
+				<span></span>
+			</div>
+		</nav>
+	</header>
+
+
+	<main class="articles_roadmap">
+		<!статьи>
+
+
+			<div class="article_our_team">
+				<div class="title_article_our_team">
+					<h1 class="buttonChangeColor">Jeremy</h1>
+					<img class="logo_article_games" src="images/DevLogos/Jeremy.png">
+				</div>
+				<div class="content_article_games">
+					<text_our_team> Почта: dadmamlol10@yandex.ru
+						<p>
+							Телефон для связи: в текущий момент отстутствует
+						</p>
+					</text_our_team>
+				</div>
+			</div>
+
+
+
+			<script>
+				var element = document.getElementById("burger");
+				var otherElement = document.getElementById("header_menu_pc");
+
+				element.addEventListener("click", function () {
+					this.classList.toggle('active');
+					otherElement.classList.toggle("hidden");
+				});
+
+				onemoreotherElement = document.getElementById("burger_bg");
+
+				element.addEventListener("click", function () {
+					this.classList.toggle('active');
+					onemoreotherElement.classList.toggle("hidden");
+				});
+			</script>
+</body>
+
+</html>

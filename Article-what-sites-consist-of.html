@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFJournal: Дьявольские фрукты</title>
+    <link rel="stylesheet" href="styles.css" type = "text/css"/>
+	<style>
+		.hidden {
+			display: flex;
+		}
+	</style>
+	
+	<style>
+		.buttonChangeColor {
+		  text-decoration: none;
+		  color: #FFFFFF;
+		}
+		a.buttonChangeColor:hover {
+		  color:  #FFFFFF;
+		  text-shadow: 0 0 5px  #FFFFFF;
+		}
+	</style>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  
+  
+  <body>
+	  <header class = "header_pc" id = "header_pc">
+			<audio id="audio" src="sounds/womp.mp3"></audio>
+			<img src="images/dfruit.webp" width = "120px" id = "DWS_logo"
+		onclick="this.src = (this.src.indexOf ('.jpg') > 0) ? 'images/dfruit.webp' : 'images/dfruit.webp';if(audio.paused){audio.currentTime=0;audio.play()}else{audio.pause()}">
+			<nav>
+				<ul class = "header_menu_pc" id = "header_menu_pc">
+					<li>
+						<a href = "news.html" class="buttonChangeColor">Главная страница</a>
+					</li>
+					<li>
+						<a href = "roadmaps.html" class="buttonChangeColor">Контактные данные</a>
+					</li>
+					<li>
+						<a href = "OurTeam.html" class="buttonChangeColor">Дьявольские фрукты</a>
+					</li>
+				</ul>
+				<div class = "burger_bg" id = "burger_bg"></div>
+				<div class = "burger" id = "burger" class="buttonChangeColor">
+					<span></span>
+				</div>
+			</nav>
+		</header>
+		<div class = "news_articles_bg">
+			<h1>Что такое дьявольские фрукты?</h1>
+			<!--img src="images/dumplings.jfif" width = "400px" height = "400px"-->
+			<img src="images/mainfruits.jpg">
+				<p>Рассмотрим основную информацию о дьявольских фруктах.</p>
+				<p>Дьявольские плоды (фрукты) - это загадочные, отличительные плоды, разбросанные по всему миру, известные тем, что навсегда наделяют съевших их сверхчеловеческими способностями и столь же постоянной неспособностью плавать.
+					 Только за одним заметным исключением, человек может приобрести силы только одного дьявольского плода и выжить.				</p>
+				<p>В целом, дьявольские плоды обладают сотнями различных сил, от (по-видимому) мирских до массово разрушительных по своей сути. 
+					Эти плоды в целом сгруппированы в три типа: 
+					Зоан, который позволяет пользователю превращаться в животное, а также в гибрид животного и человека; 
+					Логия, который даёт пользователю возможность создавать, контролировать и превращать своё тело в природный элемент; 
+					и Парамеция, предлагающая любую из множества необычных способностей, не вписывающихся в две другие категории.</p>
+				<p>Дьявольские плоды дали силу многим из самых значительных личностей в мире, особенно среди Трёх великих сил. 
+					Это, наряду с их общей редкостью, делает их очень востребованными; 
+					отдельные образцы могут быть оценены в сотни миллионов Белли, и были предприняты значительные усилия для массового производства искусственных версий для ведения войны.</p>
+				
+				
+		</div>
+		
+		
+		
+			<script>
+			  var element = document.getElementById("burger");
+			  var otherElement = document.getElementById("header_menu_pc");
+
+			  element.addEventListener("click", function() {
+			   this.classList.toggle('active');
+			   otherElement.classList.toggle("hidden");
+			  });
+			  
+			  onemoreotherElement = document.getElementById("burger_bg");
+			  
+			  element.addEventListener("click", function() {
+			   this.classList.toggle('active');
+			   onemoreotherElement.classList.toggle("hidden");
+			  });
+			</script>
+	</body>
+</html>
